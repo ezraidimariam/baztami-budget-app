@@ -38,15 +38,15 @@
       </div>
 
       <div class="header-actions">
-        <a href="login.html" class="btn btn-outline-primary me-2">login</a>
-        <a href="sign-up.html" class="btn btn-primary me-3">sign up</a>
         <button class="btn btn-outline-secondary ms-2">
           <i class="bi bi-search"></i>search
         </button>
+        <a href="login.html" class="btn btn-outline-primary me-2">login</a>
+        <a href="sign-up.html" class="btn btn-primary me-3">sign up</a>
       </div>
     </header>
 
-    <section class="py-3">
+    <section class="py-4">
       <div class="container d-flex align-items-center flex-wrap">
         <img
           src="images/telewallet.png"
@@ -70,10 +70,158 @@
         </div>
       </div>
     </section>
-    <section class="py-4">
-      
+    <section class="py-4 bg-light">
+      <div class="container">
+        <h2 class="fw-bold text-primary mb-4">Suivi de votre budget</h2>
 
+        <!-- Solde total -->
+        <div class="card text-center mb-4 shadow-sm">
+          <div class="card-body">
+            <h4 class="text-secondary">Solde total :</h4>
+            <h2 id="solde" class="fw-bold text-primary">0 DH</h2>
+          </div>
+        </div>
+
+        <!-- Totaux -->
+        <div class="d-flex justify-content-between mb-4">
+          <div class="card text-center w-50 me-2 shadow-sm">
+            <div class="card-body">
+              <h5 class="text-success">Total Revenus</h5>
+              <h3 class="fw-bold text-success">0 DH</h3>
+            </div>
+          </div>
+
+          <div class="card text-center w-50 ms-2 shadow-sm">
+            <div class="card-body">
+              <h5 class="text-danger">Total Dépenses</h5>
+              <h3 class="fw-bold text-danger">0 DH</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+    <section class="py-4">
+      <div class="container">
+        <h2 class="fw-bold text-primary mb-4">Ajouter Transaction</h2>
+
+        <!-- Card wrapper -->
+        <div class="card shadow-sm border-0">
+          <div class="card-body">
+            <form id="transaction-form">
+              <!-- Description -->
+              <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="description"
+                  placeholder="Ex: Salaire"
+                  required
+                />
+              </div>
+
+              <!-- Montant -->
+              <div class="mb-3">
+                <label for="montant" class="form-label">Montant (€)</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="montant"
+                  placeholder="Ex: 1200"
+                  required
+                />
+              </div>
+
+              <!-- Type -->
+              <div class="mb-3">
+                <label for="type" class="form-label">Type</label>
+                <select class="form-select" id="type" required>
+                  <option value="revenu">Revenu</option>
+                  <option value="depense">Dépense</option>
+                </select>
+              </div>
+
+              <!-- Date -->
+              <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" required />
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100">
+                Ajouter
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+      <div class="container text-md-left">
+        <div class="row text-md-left">
+          <!-- About -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Bztami</h5>
+            <p>
+              Application pour gérer vos transactions et suivre votre budget
+              facilement.
+            </p>
+          </div>
+
+          <!-- Links -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Liens</h5>
+            <p>
+              <a href="#" class="text-white text-decoration-none">Accueil</a>
+            </p>
+            <p>
+              <a href="#" class="text-white text-decoration-none"
+                >Transactions</a
+              >
+            </p>
+            <p>
+              <a href="#" class="text-white text-decoration-none">Budget</a>
+            </p>
+            <p>
+              <a href="#" class="text-white text-decoration-none">Contact</a>
+            </p>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Contact</h5>
+            <p><i class="bi bi-house-door-fill me-2"></i> Casablanca, Maroc</p>
+            <p><i class="bi bi-envelope-fill me-2"></i> info@bztami.com</p>
+            <p><i class="bi bi-telephone-fill me-2"></i> +212 600 000 000</p>
+          </div>
+
+          <!-- Social -->
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+            <h5 class="text-uppercase mb-4 font-weight-bold">Suivez-nous</h5>
+            <a href="#" class="text-white me-4"
+              ><i class="bi bi-facebook"></i
+            ></a>
+            <a href="#" class="text-white me-4"
+              ><i class="bi bi-twitter"></i
+            ></a>
+            <a href="#" class="text-white me-4"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="#" class="text-white me-4"
+              ><i class="bi bi-linkedin"></i
+            ></a>
+          </div>
+        </div>
+
+        <hr class="mb-4" />
+        <div class="row align-items-center">
+          <div class="col-md-7 col-lg-8">
+            <p>© 2025 Bztami. Tous droits réservés.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
