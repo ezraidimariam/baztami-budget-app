@@ -14,7 +14,9 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+
+  <body style="background-color: #fff; min-height: 100vh; display: flex; flex-direction: column;">
+
     <!-- Header -->
     <header
       class="d-flex justify-content-between align-items-center p-1 bg-light shadow-sm"
@@ -31,7 +33,7 @@
           <h1>
             <b><span class="text-primary fw-bold">B</span>aztami</b>
           </h1>
-          <p>
+          <p class="mb-0 text-secondary">
             Manage Your <span class="text-primary fw-bold">Budget</span>, Grow
             Your <span class="text-primary fw-bold">Wealth</span>
           </p>
@@ -39,110 +41,121 @@
       </div>
 
       <div class="header-actions">
-        <button class="btn btn-outline-secondary ms-2">
+        <button class="btn btn-outline-primary ms-2">
           <i class="bi bi-search"></i> search
         </button>
       </div>
     </header>
 
-    <!-- Section image + texte -->
-    <section class="py-4">
-      <div class="container d-flex align-items-center flex-wrap">
-        <img
-          src="images/telewallet.png"
-          alt="baztami image"
-          class="img-fluid me-4"
-          style="max-width: 150px"
-        />
+    <!-- Main content wrapper -->
+    <main style="flex: 1 0 auto;">
+      <!-- Section image + texte -->
+      <section class="py-4">
+        <div class="container d-flex align-items-center flex-wrap">
+          <img
+            src="images/telewallet.png"
+            alt="baztami image"
+            class="img-fluid me-4"
+            style="max-width: 150px; transition: transform 0.3s;"
+            onmouseover="this.style.transform='scale(1.05)'"
+            onmouseout="this.style.transform='scale(1)'"
+          />
 
-        <div>
-          <h3
-            class="fw-bold px-3 py-2 bg-primary bg-opacity-10 rounded text-primary"
-          >
-            Prenez le contrôle de votre budget
-          </h3>
-          <p class="text-dark mb-0">
-            <b
-              >Suivez vos revenus et dépenses facilement, prenez des décisions
-              intelligentes et atteignez vos objectifs financiers.</b
+          <div>
+            <h3
+              class="fw-bold px-3 py-2 bg-primary bg-opacity-10 rounded text-primary"
             >
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section bouton -->
-    <section class="py-4" style="margin-top: -40px">
-      <div class="container">
-        <div class="card shadow-sm border-0 mb-4">
-          <div class="card-body text-center">
-            <button id="add-transaction" class="btn btn-primary w-50">
-              + Ajouter une transaction
-            </button>
+              Prenez le contrôle de votre budget
+            </h3>
+            <p class="text-dark mb-0">
+              <b>
+                Suivez vos revenus et dépenses facilement, prenez des décisions
+                intelligentes et atteignez vos objectifs financiers.
+              </b>
+            </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Section budget -->
-    <section class="py-4 bg-light" style="margin-top: -40px">
-      <div class="container" style="transform-origin: top center">
-        <h2 class="fw-bold text-primary mb-4" style="font-size: 1.3rem">
-          Suivi de votre budget
-        </h2>
-
-        <!-- Solde total -->
-        <div class="card text-center mb-4 shadow-sm" style="font-size: 0.9rem">
-          <div class="card-body">
-            <h4 class="text-secondary" style="font-size: 1rem">
-              Solde total :
-            </h4>
-            <h2
-              id="solde"
-              class="fw-bold text-primary"
-              style="font-size: 1.8rem"
-            >
-              0 DH
-            </h2>
-          </div>
-        </div>
-
-        <!-- Totaux -->
-        <div class="d-flex justify-content-between mb-4" style="gap: 1rem">
-          <div
-            class="card text-center w-50 me-2 shadow-sm"
-            style="font-size: 0.9rem"
-          >
-            <div class="card-body">
-              <h5 class="text-success" style="font-size: 1rem">
-                Total Revenus
-              </h5>
-              <h3 class="fw-bold text-success" style="font-size: 1.4rem">
-                0 DH
-              </h3>
-            </div>
-          </div>
-
-          <div
-            class="card text-center w-50 ms-2 shadow-sm"
-            style="font-size: 0.9rem"
-          >
-            <div class="card-body">
-              <h5 class="text-danger" style="font-size: 1rem">
-                Total Dépenses
-              </h5>
-              <h3 class="fw-bold text-danger" style="font-size: 1.4rem">
-                0 DH
-              </h3>
+      <!-- Section bouton -->
+      <section class="py-4" style="margin-top: -40px;">
+        <div class="container">
+          <div class="card shadow-sm border-0 mb-4" style="border-radius: 1rem;">
+            <div class="card-body text-center">
+              <button id="add-transaction" class="btn btn-primary w-50 py-2 fw-bold"
+                style="border-radius: 30px; transition: 0.3s;"
+                onmouseover="this.style.opacity='0.9'"
+                onmouseout="this.style.opacity='1'">
+                + Ajouter une transaction
+              </button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Section budget -->
+      <section class="py-4 bg-light" style="margin-top: -40px;">
+        <div class="container" style="transform-origin: top center;">
+          <h2 class="fw-bold text-primary mb-4" style="font-size: 1.3rem">
+            Suivi de votre budget
+          </h2>
+
+          <!-- Solde total -->
+          <div class="card text-center mb-4 shadow-sm" style="font-size: 0.9rem; border-radius: 1rem;">
+            <div class="card-body">
+              <h4 class="text-secondary" style="font-size: 1rem">
+                Solde total :
+              </h4>
+              <h2
+                id="solde"
+                class="fw-bold text-primary"
+                style="font-size: 1.8rem"
+              >
+                0 DH
+              </h2>
+            </div>
+          </div>
+
+          <!-- Totaux -->
+          <div class="d-flex justify-content-between mb-4" style="gap: 1rem;">
+            <div
+              class="card text-center w-50 me-2 shadow-sm"
+              style="font-size: 0.9rem; border-radius: 1rem;"
+            >
+              <div class="card-body">
+                <h5 class="text-success" style="font-size: 1rem">
+                  Total Revenus
+                </h5>
+                <h3 class="fw-bold text-success" style="font-size: 1.4rem">
+                  0 DH
+                </h3>
+              </div>
+            </div>
+
+            <div
+              class="card text-center w-50 ms-2 shadow-sm"
+              style="font-size: 0.9rem; border-radius: 1rem;"
+            >
+              <div class="card-body">
+                <h5 class="text-danger" style="font-size: 1rem">
+                  Total Dépenses
+                </h5>
+                <h3 class="fw-bold text-danger" style="font-size: 1.4rem">
+                  0 DH
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="text-center py-3 bg-light text-secondary;">
-      <p style="font-size: 0.8rem">© 2025 Bztami. Tous droits réservés.</p>
+    <footer class="text-center py-3 bg-light text-secondary mt-auto" style="border-top: 1px solid #e0e0e0;">
+      <p style="font-size: 0.8rem; margin-bottom: 0;">
+        © 2025 <b class="text-primary">Bztami</b>. Tous droits réservés.
+      </p>
     </footer>
+
   </body>
 </html>
