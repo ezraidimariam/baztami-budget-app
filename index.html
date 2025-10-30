@@ -15,8 +15,9 @@
     />
   </head>
 
-  <body style="background-color: #fff; min-height: 100vh; display: flex; flex-direction: column;">
-
+  <body
+    style="background-color: #fff; min-height: 100vh; display: flex; flex-direction: column"
+  >
     <!-- Header -->
     <header
       class="d-flex justify-content-between align-items-center p-1 bg-light shadow-sm"
@@ -48,7 +49,7 @@
     </header>
 
     <!-- Main content wrapper -->
-    <main style="flex: 1 0 auto;">
+    <main style="flex: 1 0 auto">
       <!-- Section image + texte -->
       <section class="py-4">
         <div class="container d-flex align-items-center flex-wrap">
@@ -56,7 +57,7 @@
             src="images/telewallet.png"
             alt="baztami image"
             class="img-fluid me-4"
-            style="max-width: 150px; transition: transform 0.3s;"
+            style="max-width: 150px; transition: transform 0.3s"
             onmouseover="this.style.transform='scale(1.05)'"
             onmouseout="this.style.transform='scale(1)'"
           />
@@ -78,30 +79,85 @@
       </section>
 
       <!-- Section bouton -->
-      <section class="py-4" style="margin-top: -40px;">
+      <section class="py-4" style="margin-top: -40px">
         <div class="container">
-          <div class="card shadow-sm border-0 mb-4" style="border-radius: 1rem;">
+          <div class="card shadow-sm border-0 mb-4" style="border-radius: 1rem">
             <div class="card-body text-center">
-              <button id="add-transaction" class="btn btn-primary w-50 py-2 fw-bold"
-                style="border-radius: 30px; transition: 0.3s;"
+              <button
+                id="add-transaction"
+                class="btn btn-primary w-50 py-2 fw-bold"
+                style="border-radius: 30px; transition: 0.3s"
                 onmouseover="this.style.opacity='0.9'"
-                onmouseout="this.style.opacity='1'">
+                onmouseout="this.style.opacity='1'"
+              >
                 + Ajouter une transaction
               </button>
+
+              <!-- ✅ Hidden Form -->
+              <form
+                id="transaction-form"
+                class="mt-4 p-3 border rounded bg-light text-start"
+                style="display: none; max-width: 500px; margin: 0 auto"
+              >
+                <div class="mb-3">
+                  <label for="type" class="form-label fw-bold">Type</label>
+                  <select id="type" class="form-select">
+                    <option value="">Choisir...</option>
+                    <option value="revenu">Revenu</option>
+                    <option value="depense">Dépense</option>
+                  </select>
+                </div>
+
+                <div class="mb-3">
+                  <label for="montant" class="form-label fw-bold">Montant</label>
+                  <input
+                    type="number"
+                    id="montant"
+                    class="form-control"
+                    placeholder="Ex: 200 DH"
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <label for="date" class="form-label fw-bold">Date</label>
+                  <input type="date" id="date" class="form-control" />
+                </div>
+
+                <div class="mb-3">
+                  <label for="description" class="form-label fw-bold"
+                    >Description</label
+                  >
+                  <input
+                    type="text"
+                    id="description"
+                    class="form-control"
+                    placeholder="Ex: Salaire, courses..."
+                  />
+                </div>
+
+                <div class="text-center">
+                  <button type="submit" class="btn btn-success w-50">
+                    Enregistrer
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </section>
 
       <!-- Section budget -->
-      <section class="py-4 bg-light" style="margin-top: -40px;">
-        <div class="container" style="transform-origin: top center;">
+      <section class="py-4 bg-light" style="margin-top: -40px">
+        <div class="container" style="transform-origin: top center">
           <h2 class="fw-bold text-primary mb-4" style="font-size: 1.3rem">
             Suivi de votre budget
           </h2>
 
           <!-- Solde total -->
-          <div class="card text-center mb-4 shadow-sm" style="font-size: 0.9rem; border-radius: 1rem;">
+          <div
+            class="card text-center mb-4 shadow-sm"
+            style="font-size: 0.9rem; border-radius: 1rem"
+          >
             <div class="card-body">
               <h4 class="text-secondary" style="font-size: 1rem">
                 Solde total :
@@ -117,10 +173,10 @@
           </div>
 
           <!-- Totaux -->
-          <div class="d-flex justify-content-between mb-4" style="gap: 1rem;">
+          <div class="d-flex justify-content-between mb-4" style="gap: 1rem">
             <div
               class="card text-center w-50 me-2 shadow-sm"
-              style="font-size: 0.9rem; border-radius: 1rem;"
+              style="font-size: 0.9rem; border-radius: 1rem"
             >
               <div class="card-body">
                 <h5 class="text-success" style="font-size: 1rem">
@@ -134,7 +190,7 @@
 
             <div
               class="card text-center w-50 ms-2 shadow-sm"
-              style="font-size: 0.9rem; border-radius: 1rem;"
+              style="font-size: 0.9rem; border-radius: 1rem"
             >
               <div class="card-body">
                 <h5 class="text-danger" style="font-size: 1rem">
@@ -151,11 +207,15 @@
     </main>
 
     <!-- Footer -->
-    <footer class="text-center py-3 bg-light text-secondary mt-auto" style="border-top: 1px solid #e0e0e0;">
-      <p style="font-size: 0.8rem; margin-bottom: 0;">
+    <footer
+      class="text-center py-3 bg-light text-secondary mt-auto"
+      style="border-top: 1px solid #e0e0e0"
+    >
+      <p style="font-size: 0.8rem; margin-bottom: 0">
         © 2025 <b class="text-primary">Bztami</b>. Tous droits réservés.
       </p>
     </footer>
+<script src="script.js"></script>
 
   </body>
 </html>
