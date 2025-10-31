@@ -18,18 +18,20 @@ btn.addEventListener("click", () => {
 // soumettre formulaire
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+  
 
   const type = document.getElementById("type").value;
   const montant = parseFloat(document.getElementById("montant").value);
   const description = document.getElementById("description").value;
   const date = document.getElementById("date").value;
 
-  if (!type || isNaN(montant)) {
+  if (!type || isNaN(montant)) 
+    {
     alert("Remplissez le type et le montant !");
     return;
   }
 
-  // إنشاء كارت المعاملة
+ 
   const div = document.createElement("div");
   div.className = "card p-2 mb-2 shadow-sm";
   div.style.borderLeft = type === "revenu" ? "6px solid green" : "6px solid red";
@@ -40,7 +42,7 @@ form.addEventListener("submit", (e) => {
   `;
   list.prepend(div);
 
-  // تحديث الحسابات
+ 
   if (type === "revenu") totalRevenus += montant;
   else totalDepenses += montant;
 
@@ -56,7 +58,7 @@ form.addEventListener("submit", (e) => {
   saveData();
 });
 
-// الحفظ فـlocalStorage
+
 function saveData() {
   const data = {
     totalRevenus,
@@ -66,7 +68,7 @@ function saveData() {
   localStorage.setItem("baztami", JSON.stringify(data));
 }
 
-// استرجاع البيانات ملي تفتح الصفحة
+
 function loadData() {
   const saved = localStorage.getItem("baztami");
   if (saved) {
