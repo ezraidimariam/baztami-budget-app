@@ -1,4 +1,4 @@
-**# Baztami
+
 
 ## 💰 Description
 Baztami est une application web qui permet aux utilisateurs de **suivre, organiser et maîtriser leurs revenus et dépenses** au quotidien.  
@@ -65,5 +65,5 @@ Elle offre une interface simple et intuitive pour ajouter, modifier et supprimer
 
 ## 👩‍💻 Auteur
 **Présenté par :** Maryam Zraydi  
-**Encadré par :** [Nom du professeur]  
+**Encadré par :**Achraf Chaoub
 **
