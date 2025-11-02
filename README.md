@@ -1,19 +1,19 @@
 
 
-## 💰 Description
+ 💰 Description
 Baztami est une application web qui permet aux utilisateurs de **suivre, organiser et maîtriser leurs revenus et dépenses** au quotidien.  
 Elle offre une interface simple et intuitive pour ajouter, modifier et supprimer des transactions, visualiser le solde et les totaux en temps réel, et sauvegarder les données localement.
 
 ---
 
-## 🎯 Objectifs
+ 🎯 Objectifs
 - Faciliter la gestion du budget personnel.  
 - Fournir une vue claire et rapide des revenus et dépenses.  
 - Permettre une prise de décision financière éclairée.  
 
 ---
 
-## 📝 Fonctionnalités principales
+ 📝 Fonctionnalités principales
 - Ajout, modification et suppression des transactions avec confirmation.  
 - Visualisation des transactions sous forme de **cartes colorées** : vert pour les revenus, rouge pour les dépenses.  
 - Calcul automatique et en temps réel du **total des revenus, total des dépenses et solde**.  
@@ -22,7 +22,7 @@ Elle offre une interface simple et intuitive pour ajouter, modifier et supprimer
 
 ---
 
-## 💻 Technologies utilisées
+ 💻 Technologies utilisées
 - **HTML** – structure et contenu des pages  
 - **CSS** – styles, mise en page et couleurs  
 - **JavaScript** – interaction et calcul automatique  
@@ -31,7 +31,7 @@ Elle offre une interface simple et intuitive pour ajouter, modifier et supprimer
 
 ---
 
-## 📅 Planification du projet
+ 📅 Planification du projet
 1. Préparation : analyse des besoins, user stories, création du repository GitHub.  
 2. Design et prototype : wireframes, maquettes, choix des couleurs et styles.  
 3. Développement : ajout, modification, suppression, calcul des totaux, sauvegarde locale.  
